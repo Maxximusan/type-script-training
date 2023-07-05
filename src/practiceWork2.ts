@@ -4,13 +4,16 @@ let namePerson: string;
 let toggle: boolean;
 let empty: null;
 let notInitialize: undefined;
+let callback: (agr1: number) => number
 
 age = 50;
 namePerson = 'Max';
 toggle = true;
 empty = null;
 notInitialize = undefined;
-let callback = (a: number) => { return 100 + a };
+callback = (a) => { return 100 + a };
+
+console.log(callback(5));
 
 // or
 // const age = 50;
@@ -18,6 +21,7 @@ let callback = (a: number) => { return 100 + a };
 // const toggle = true;
 // const empty = null;
 // const notInitialize = undefined;
+// const callback = (a: number) => { return 100 + a };
 
 // задание 2.2 +
 let anything: any;
@@ -75,9 +79,8 @@ if (literal === 'enable') {
     console.log('you can to come in');
 
     // для disabled
-    // // console.log('you can NOT to come in')
-}
-
+    // console.log('you can NOT to come in')
+} 
 // or - переключатель
 function literalType(literall: 'enable' | 'disable') {
     if (literall === 'enable') {
@@ -136,3 +139,4 @@ const page2: Page = {
   accounts: ['Alex'],
   status: 'close',
 }
+
