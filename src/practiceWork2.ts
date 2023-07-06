@@ -42,8 +42,8 @@ if ( typeof some === 'string') {
 }
 // задание 2.4 +
 // Сделайте неизменяемый массив со строго описанными типами. имхо: Tuple
-let person: [string, number]
-person = ['Max', 21];
+let personn: [string, number]
+personn = ['Max', 21];
 
 // задание 2.5 +
 // Опишите enum условие следующее, он должен отображать статус загрузки. Загружается (LOADING) и загружена (READY).
@@ -60,6 +60,20 @@ if (cheked.status === Load.LOADING) {
     console.log('It is Ready');
     
 }
+// or
+// enum Load {LOADING, READY};
+
+// const page = {
+//   load: Load.READY
+// }
+
+// if (page.load === Load.LOADING) {
+//   console.log('Страница загружается');
+// }
+// if (page.load === Load.READY) {
+//   console.log('Страница загружена');
+// }
+
 
 // задание 2.6
 // Сделайте переменную, которая может принимать или строку или число.

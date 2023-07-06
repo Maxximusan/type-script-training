@@ -66,65 +66,65 @@ button.addEventListener("click", function() {
 // stoneHouse.addTenant('Franky')
 // stoneHouse.showTenants()
 
-class UseStatic {
-  private static count = 0;
+// class UseStatic {
+//   private static count = 0;
 
-  constructor () {
-    UseStatic.count += 1;
-  }
+//   constructor () {
+//     UseStatic.count += 1;
+//   }
 
-  public static itStaticMethod () {
-    console.log('Run static method');
-  }
+//   public static itStaticMethod () {
+//     console.log('Run static method');
+//   }
 
-  public showCount () {
-    console.log(UseStatic.count);
-  }
-}
+//   public showCount () {
+//     console.log(UseStatic.count);
+//   }
+// }
 
-const obj1 = new UseStatic();
-const obj2 = new UseStatic();
-// const obj3 = new UseStatic();
+// const obj1 = new UseStatic();
+// const obj2 = new UseStatic();
+// // const obj3 = new UseStatic();
 
-obj1.showCount();
-obj2.showCount();
-// obj3.showCount();
+// obj1.showCount();
+// obj2.showCount();
+// // obj3.showCount();
 
-UseStatic.itStaticMethod();
-
-
-
-abstract class Plane {
-  protected pilotInCabin = false;
-
-  public sitInPlane () {
-    this.pilotInCabin = true;
-  }
-
-  public abstract startEngine(): string;
-}
+// UseStatic.itStaticMethod();
 
 
-class Maize extends Plane {
-  public startEngine () {
+
+// abstract class Plane {
+//   protected pilotInCabin = false;
+
+//   public sitInPlane () {
+//     this.pilotInCabin = true;
+//   }
+
+//   public abstract startEngine(): string;
+// }
+
+
+// class Maize extends Plane {
+//   public startEngine () {
    
-    return 'ta-ta-ta';
-  }
-}
+//     return 'ta-ta-ta';
+//   }
+// }
 
-class Boeing extends Plane {
-  public startEngine () {
+// class Boeing extends Plane {
+//   public startEngine () {
   
-    return 'buuuuuu';
-  }
-}
+//     return 'buuuuuu';
+//   }
+// }
 
-const maize = new Maize()
-const boeing = new Boeing()
+// const maize = new Maize()
+// const boeing = new Boeing()
 
-maize.sitInPlane()
-  boeing.sitInPlane()
+// maize.sitInPlane()
+//   boeing.sitInPlane()
 
-console.log(maize.startEngine());
-  console.log(boeing.startEngine());
+// console.log(maize.startEngine());
+//   console.log(boeing.startEngine());
   
