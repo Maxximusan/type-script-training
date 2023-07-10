@@ -128,3 +128,15 @@ button.addEventListener("click", function() {
 // console.log(maize.startEngine());
 //   console.log(boeing.startEngine());
   
+
+//практикую 5е дз
+const input3 = document.getElementById('inputValue') 
+
+if (input3) {
+  // (input3 as HTMLInputElement).value
+  const newInput = input3 as HTMLInputElement
+  newInput.value
+  
+  
+}
+

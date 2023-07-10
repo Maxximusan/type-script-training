@@ -44,7 +44,10 @@ class MyHouse extends House {
        if (key.getSignature() !== this.key.getSignature()) {
             throw new Error ('Key to another door')
        }
+       
        return this.door = true
+       
+       
     }
 }
 
