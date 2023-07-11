@@ -139,4 +139,66 @@ if (input3) {
   
   
 }
+//Дженерик для ф-и
+function entity<T>(args: T): T {
+  return args
+}
+entity<number>(1)
+entity<string>('1')
 
+// стрелочная ф-я
+const entoty2 = <T>(args: T): T => {
+  return args
+}
+
+entoty2<number>(1)
+entoty2<string>('1')
+
+// Дженерик для класса
+
+class Channel <T>{
+  private name: T;
+  
+  constructor(name: T) {
+     this.name = name
+  }
+  
+  getName(): T {
+    return this.name
+  }
+}
+
+const channel1 = new Channel<string>('fuck')
+const channel2 = new Channel<number>(55)
+
+// Дженерик для Интерфейсов
+
+interface IPair <K, V>{
+  key: K
+  value: V
+}
+
+const pair1: IPair <string, number> = { 
+  key: '1',
+  value: 1
+}
+
+const pair2: IPair <number, boolean>= {
+  key: 33,
+  value: true
+}
+
+// Тип Дженерика по умолчанию
+
+type TypeLength = {
+  length: number
+}
+
+function getNameLength <T extends TypeLength>(entity: T): number {
+  return entity.length
+}
+
+getNameLength('ghvhjgvjhgv')
+getNameLength([1, 2, 3, 4])
+getNameLength(['sd','sff','df'])
+getNameLength(['sd','sff',1])
