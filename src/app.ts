@@ -201,4 +201,63 @@ function getNameLength <T extends TypeLength>(entity: T): number {
 getNameLength('ghvhjgvjhgv')
 getNameLength([1, 2, 3, 4])
 getNameLength(['sd','sff','df'])
-getNameLength(['sd','sff',1])
+getNameLength(['sd', 'sff', 1])
+
+//практикую 6е дз
+// 6.1
+function Logger(logString: string) {
+  return function(constructor: Function){
+  console.log(logString);
+  
+  console.log(constructor);
+  }
+}
+
+function AddProperty() {
+  return function(constructor: Function){
+  constructor.prototype.modify = true
+  
+  console.log('add property');
+  }
+}
+
+@Logger('Loading - controller')
+  @AddProperty()
+class Controller{
+  public id = 1;
+  public modify = false
+}
+
+const controller = new Controller()
+console.log('it is modify', controller.modify);
+
+
+// 6.3
+function ShowParams(target: any, name: string, descriptor: PropertyDescriptor) {
+  console.log('target', target);
+  console.log('name', name);
+    console.log('descriptor', descriptor);
+}
+
+
+class Notifier {
+  @ShowParams
+  showMessage() {
+    console.log('show this message');
+    
+  }
+}
+
+// 6.4
+function CheckEmail(target: any, name: string, position: number) {
+  console.log('target', target);
+  console.log('name', name);
+    console.log('position', position);
+}
+
+class Personn {
+  setEmail(@CheckEmail email: string){
+    console.log(email);
+    }
+  
+}
